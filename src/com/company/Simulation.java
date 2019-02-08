@@ -10,8 +10,12 @@ public class Simulation {
     final String filename_2 = "phase-2.txt";
     private int item_weight;
 
-    ArrayList<Item> loadItems() {
-        File file = new File(filename_1);
+    ArrayList<Item> loadItems2() {
+        return loadItemsFromFile(filename_2);
+    }
+
+    ArrayList<Item> loadItemsFromFile(String filename) {
+        File file = new File(filename);
         Scanner scanner = null;
         try {
             scanner = new Scanner(file);
@@ -37,7 +41,12 @@ public class Simulation {
             item_list.add(new Item(item_name, item_weight / 1000));
         }
         return item_list;
+
+
     }
+    ArrayList<Item> loadItems1() {
+        return loadItemsFromFile(filename_1);
+        }
 
     ArrayList<Rocket> loadU1(ArrayList<Item> items) {
         return loadRocket(items, TypesOfRocket.ROCKET_1);
