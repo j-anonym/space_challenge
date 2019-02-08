@@ -13,15 +13,15 @@ public class Main {
         int budget;
         System.out.println("------------SIMULATION OF EXPEDITION TO MARS------------");
         budget = simulation.runSimulation(simulation.loadU1(items_1));
-        System.out.println("::::::::::FIRST ROCKET::::COSTS OF FIRST CARGO\n"+budget);
+        System.out.println("::::::::::FIRST ROCKET::::COSTS OF FIRST CARGO\n" + budget);
         budget = simulation.runSimulation(simulation.loadU1(items_2));
-        System.out.println("::::::::::FIRST ROCKET::::COSTS OF SECOND CARGO\n"+budget);
+        System.out.println("::::::::::FIRST ROCKET::::COSTS OF SECOND CARGO\n" + budget);
 
         budget = simulation.runSimulation(simulation.loadU2(items_1));
-        System.out.println("::::::::::SECOND ROCKET::::COSTS OF FIRST CARGO\n"+budget);
+        System.out.println("::::::::::SECOND ROCKET::::COSTS OF FIRST CARGO\n" + budget);
 
         budget = simulation.runSimulation(simulation.loadU2(items_2));
-        System.out.println("::::::::::SECOND ROCKET::::COSTS OF SECOND CARGO\n"+budget);
+        System.out.println("::::::::::SECOND ROCKET::::COSTS OF SECOND CARGO\n" + budget);
 
     }
 }

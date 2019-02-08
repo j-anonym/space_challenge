@@ -6,12 +6,15 @@ import java.util.Scanner;
 import java.util.function.Function;
 
 public class Simulation {
-    final String filename_1 = "phase-1.txt";
-    final String filename_2 = "phase-2.txt";
-    private int item_weight;
+    final String FILENAME_1 = "phase-1.txt";
+    final String FILENAME_2 = "phase-2.txt";
 
     ArrayList<Item> loadItems2() {
-        return loadItemsFromFile(filename_2);
+        return loadItemsFromFile(FILENAME_2);
+    }
+
+    ArrayList<Item> loadItems1() {
+        return loadItemsFromFile(FILENAME_1);
     }
 
     ArrayList<Item> loadItemsFromFile(String filename) {
@@ -44,9 +47,6 @@ public class Simulation {
 
 
     }
-    ArrayList<Item> loadItems1() {
-        return loadItemsFromFile(filename_1);
-        }
 
     ArrayList<Rocket> loadU1(ArrayList<Item> items) {
         return loadRocket(items, TypesOfRocket.ROCKET_1);
