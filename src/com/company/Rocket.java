@@ -26,4 +26,9 @@ public class Rocket implements SpaceShipInterface {
     public void setActualWeight(int actual_weight) {
         this.actual_weight = actual_weight;
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(max_weight - actual_weight);
+    }
 }
